@@ -19,5 +19,4 @@ GROUP BY neighbourhood;
 -- Consulta para verificar os dados inseridos na tabela dataset--
 SELECT * from dataset;
 
-
 -- transformação dos dados na tabela dataset para csv--
