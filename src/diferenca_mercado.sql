@@ -14,19 +14,7 @@ SELECT neighbourhood,
     price
 FROM listings;
 
---aprender a lidar com array jason no sql--
---query não funiona--
-SELECT neighbourhood,
-    JSON_EXTRACT (amenities, "$[:]") AS comodidades_visinhanca
-FROM listings;
-
---faz lista de todos os arays json-- 
-SELECT neighbourhood,
-    JSON_UNQUOTE(amenities) as lista
-    FROM listings;
-
---quero separar os atributos do array em linhas separadas--
---query que funciona--
+--query para separar as amenities (comodidades) por neighbourhood (visinhanca)--
 SELECT l.neighbourhood,
     c.amenities
 FROM listings AS l
