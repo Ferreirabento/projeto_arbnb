@@ -1,10 +1,7 @@
 --quais atributos tem maior influencia no preço--
-
-USE projeto_airbnb;
-
-
 SELECT * FROM listings;
 
+--query para ver os atributos principais do dataset--
 SELECT neighbourhood,
     property_type,
     room_type,
@@ -22,7 +19,4 @@ FROM listings AS l
         l.amenities,
         '$[*]' COLUMNS (amenities VARCHAR(100) PATH '$')
     ) AS c;
-
-
-
 
